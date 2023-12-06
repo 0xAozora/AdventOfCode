@@ -1,5 +1,5 @@
 [package]
-name = "advent_of_code"
+name = "day4"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,7 +7,6 @@ edition = "2021"
 
 [dependencies]
 
-[workspace]
-members = [
-    "day3",
-]
+[[bin]]
+name = "day4"
+path = "main.rs"
