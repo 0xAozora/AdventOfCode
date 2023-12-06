@@ -16,7 +16,8 @@ func main() {
 	lines := strings.Split(string(b), "\n")
 	lines = lines[:len(lines)-1]
 
-	var sum int
+	var sum1 int
+	var sum2 int
 	var max [3]int
 
 	for i, line := range lines {
@@ -40,14 +41,17 @@ func main() {
 		}
 
 		if max[0] <= 12 && max[1] <= 13 && max[2] <= 14 {
-			sum += i + 1
+			sum1 += i + 1
 		}
+
+		sum2 += max[0] * max[1] * max[2]
 
 		max = [3]int{}
 
 	}
 
-	fmt.Println(sum)
+	fmt.Println(sum1)
+	fmt.Println(sum2)
 }
 
 func getBalls(ball string) (int, int) {
