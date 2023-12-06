@@ -15,6 +15,7 @@ func main() {
 	lines := bytes.Split(b, []byte{'\n'})
 	lines = lines[:len(lines)-1]
 
+	fmt.Println(challenge1(lines))
 	fmt.Println(challenge2(lines))
 }
 
