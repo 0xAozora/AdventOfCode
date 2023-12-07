@@ -10,10 +10,7 @@ fn main() {
     if let Ok(lines) = read_lines("./input") {
         // Consumes the iterator, returns an (Optional) String
 
-        let mut ring: [i64; 25] = [1;25];
-
-        println!("{:?}", ring);
-
+        let mut ring: [i64; 10] = [1;10];
         let mut r: usize = 0;
         
         for line in lines {
@@ -42,13 +39,13 @@ fn main() {
             let mut i = r;
             while amount > 0 {
                 i += 1;
-                i %= 25;
+                i %= 10;
                 ring[i] += copies;
                 amount -= 1;
             }
 
             r += 1;
-            r %= 25;
+            r %= 10;
 
             sum += points >> 1;
         }
